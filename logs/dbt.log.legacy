@@ -1,0 +1,23 @@
+2023-05-01 06:21:13.480657 (MainThread): Running with dbt=1.4.6
+2023-05-01 06:21:14.318946 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt_rpc.task.server.RPCServerTask'>, debug=None, defer=None, exclude=None, fail_fast=None, host='0.0.0.0', log_cache_events=False, log_format=None, models=None, partial_parse=True, port=8580, printer_width=None, profile='user', profiles_dir='/usr/src/develop/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='rpc', write_json=None)
+2023-05-01 06:21:14.332918 (MainThread): Tracking: tracking
+2023-05-01 06:21:14.334309 (MainThread): 06:21:14  Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f946a6fbca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9453e0b370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9453e105b0>]}
+2023-05-01 06:21:14.334917 (MainThread): Serving RPC server at 0.0.0.0:8580, pid=32
+2023-05-01 06:21:14.335221 (MainThread): Supported methods: ['build', 'cli_args', 'compile', 'compile_sql', 'deps', 'docs.generate', 'gc', 'get-manifest', 'kill', 'list', 'poll', 'ps', 'run', 'run-operation', 'run_sql', 'seed', 'snapshot', 'snapshot-freshness', 'source-freshness', 'status', 'test']
+2023-05-01 06:21:14.335619 (MainThread): Send requests to http://localhost:8580/jsonrpc
+2023-05-01 06:21:14.424027 (Thread-12): 06:21:14  checksum: 0049c9ca814b191acba678e7b1a0d7a85eeac3e13700309cfc1ce1a2c78d3886, vars: {}, profile: user, target: None, version: 1.4.6
+2023-05-01 06:21:14.427017 (Thread-12): 06:21:14  Unable to do partial parsing because saved manifest not found. Starting full parse.
+2023-05-01 06:21:14.427313 (Thread-12): 06:21:14  Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '4fb43b96-5648-49cd-8130-f6112a1b9f2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9453e66fd0>]}
+2023-05-01 06:21:14.984080 (Thread-13): handling status request
+2023-05-01 06:21:15.004844 (Thread-13): 06:21:15  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '4fb43b96-5648-49cd-8130-f6112a1b9f2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9453dc7d60>]}
+2023-05-01 06:21:15.005401 (Thread-13): sending response (<Response 163 bytes [200 OK]>) to 10.0.185.129
+2023-05-01 06:21:15.117200 (Thread-12): 06:21:15  1699: static parser successfully parsed example/my_second_dbt_model.sql
+2023-05-01 06:21:15.130025 (Thread-12): 06:21:15  1699: static parser successfully parsed example/my_first_dbt_model.sql
+2023-05-01 06:21:15.223032 (Thread-12): 06:21:15  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4fb43b96-5648-49cd-8130-f6112a1b9f2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9453a27700>]}
+2023-05-01 06:21:15.911466 (Thread-14): handling status request
+2023-05-01 06:21:15.911936 (Thread-14): 06:21:15  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '4fb43b96-5648-49cd-8130-f6112a1b9f2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9453a14490>]}
+2023-05-01 06:21:15.912429 (Thread-14): sending response (<Response 2371 bytes [200 OK]>) to 10.0.185.129
+2023-05-01 06:21:24.269192 (MainThread): 06:21:24  Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9453e0b370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f946a6fbca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9453e10640>]}
+2023-05-01 06:21:24.269553 (MainThread): 06:21:24  Flushing usage events
+2023-05-01 06:21:24.294621 (MainThread): Runtime Error
+  no dbt_project.yml found at expected path /usr/src/develop/user-189515/environment-191555/repository-144945/dbt_project.yml
